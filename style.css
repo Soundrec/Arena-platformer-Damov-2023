@@ -101,11 +101,11 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
   overflow: hidden;
-  background-image: url(images//bg3.svg);
+  background-image: url(images/bg3.svg);
   background-size:100%;
+  background-position:center;
+  background-size: cover;
   margin: 0;
 }
 
