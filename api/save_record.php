@@ -8,20 +8,24 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-echo "error Всё сработало!";
 
-$filename = "example.txt"; // Replace with your desired filename
-$string = strval($_POST["time"]) . " " . strval($_POST["mob_type"]) . " " . strval($_POST["kill_count"]) . "\n";
+// Retrieve time variable in milliseconds
+$time = $_POST['time'];
+// Retrieve username and score variables
+$username = "system";
+$score = $_POST["mob_type"] * $_POST["kill_count"];
 
-// 
+// Insert data into temp table
+$sql = "INSERT INTO temp (username, score, time) VALUES ('$username', '$score', '$time')";
+$result = mysqli_query($conn, $sql);
 
-// Open the file for writing (create it if it doesn't exist)
-$file = fopen($filename, "a+") or die("Unable to open file!");
+if ($result) {
+    echo "Data inserted successfully!";
+} else {
+    echo "Error inserting data: " . mysqli_error($conn);
+}
 
-// Write the string to the file
-fwrite($file, $string);
-
-// Close the file
-fclose($file);
+// Free up memory
+mysqli_free_result($result);
 
 ?>
