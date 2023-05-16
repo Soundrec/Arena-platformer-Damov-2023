@@ -1,0 +1,214 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="images//icon.png" type="image/x-icon">
+			<title>
+				Doom Arena
+			</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+	<canvas id="canvas" class="layer1">
+	</canvas>
+	
+	<a href="#authorization">
+		<div id="overlay" class="test">
+			<!-- <div class="btn btn-one"> -->
+				<!-- <span>SIGN IN</span> -->
+				<img src='images\signin.png' class='signin-img'>
+			<!-- </div> -->
+		</div>
+	</a>
+	
+
+	<a href="#game1">
+		<div id="overlay" class="box-1">
+			<div class="btn btn-one">
+				<span>START GAME</span>
+			</div>
+		</div>
+	</a>
+	<a href="#scores">
+		<div id="overlay" class="box-2">
+			<div class="btn btn-one">
+				<span>RECORDS</span>
+			</div>
+		</div>
+	</a>	
+	<!-- <a href="#authorization">
+		<div id="overlay" class="box-3">
+			<div class="btn btn-one">
+				<span>SIGN IN</span>
+			</div>
+		</div>
+	</a> -->
+	<div id="overlay" class="box-3">
+	  	<span class="tooltip"> 
+			<div class="btn btn-one">
+				ABOUT
+  				<span class="tooltiptext">
+  					This game and website were made by students of Siberian State Aerospace University in 2023
+  				</span>
+	  		</span>
+		</div>
+	</div>
+
+
+</div>
+
+<a href="#x" class = "goverlay" id="game1"> </a>
+	<div class = "popup">  
+
+    <iframe src="game.html" rel ="preload" class = "gameframe"></iframe>
+    <a class="close" href="#close"> </a> 
+</div>
+
+</div>	
+	
+<a href="#x" class = "goverlay" id="authorization"> </a>
+	<div class = "popup">
+	<!-- <div class = "reg_form"> -->
+		<h2>SIGN IN</h2>
+
+		<form>
+		    <p><input type="text" placeholder = "Name">
+	    	</p>
+	    	<p>
+	    	<input type="password" placeholder = "Password">
+		    </p>
+		    
+			<a href="#close">
+				<div id="overlay" class="box-reg">
+					<div class="btn btn-one">
+						<span> CONFIRM </span>
+					</div>
+				</div>
+			</a>
+			<br>
+			<br>
+			<a href="#registration">
+				<div id="overlay" class="box-reg">
+					<div class="btn btn-one">
+						<span> SIGN UP </span>
+					</div>
+				</div>
+			</a>
+
+		</form>
+	<a class="close" href="#close"></a> 
+</div>
+	
+<a hres="#x" class = "goverlay" id="registration"> </a>
+<div class = "popup">
+		<h2>SIGN UP</h2>
+
+		<form>
+		    <p><input type="text" placeholder = "Name">
+	    	</p>
+	    	<p>
+	    	<input type="password" placeholder = "Password">
+		    </p>
+		    <p>
+	    	<input type="password" placeholder = "Repeat password">
+			</p>
+			
+			<a href="#close">
+				<div id="overlay" class="box-reg">
+					<div class="btn btn-one">
+						<span> CONFIRM </span>
+					</div>
+				</div>
+			</a>
+			<br>
+			<br>
+			<a href="#authorization">
+				<div id="overlay" class="box-reg">
+					<div class="btn btn-one">
+						<span> SIGN IN </span>
+					</div>
+				</div>
+			</a>
+
+		</form>
+	<a class="close" href="#close"></a> 
+</div>			
+
+
+<a href="#x" class = "goverlay" id="scores"> </a>
+	<div class = "popup">
+		<h2>HIGHSCORES</h2>
+	<p>
+		<!-- maybe no <p>? Vova? -->
+		1. contents_________AAAA
+		<br>
+		2. contents_________BBBB
+		<br>
+		3. contents_________AAAA
+		<br>
+		4. contents_________BBBB
+		<br>
+		5. contents_________AAAA
+		<br>
+		6. contents_________BBBB
+		<br>
+		7. contents_________AAAA
+		<br>
+		8. contents_________BBBB
+		<br>
+		9. contents_________AAAA
+		<br>
+		10. contents_________BBBB
+		<br>
+		1. contents_________AAAA
+		<br>
+		2. contents_________BBBB
+		<br>
+		3. contents_________AAAA
+		<br>
+		4. contents_________BBBB
+		<br>
+		5. contents_________AAAA
+		<br>
+		6. contents_________BBBB
+		<br>
+		7. contents_________AAAA
+		<br>
+		8. contents_________BBBB
+		<br>
+		9. contents_________AAAA
+		<br>
+		10. contents_________BBBB
+		<br>
+		1. contents_________AAAA
+		<br>
+		2. contents_________BBBB
+		<br>
+		3. contents_________AAAA
+		<br>
+		4. contents_________BBBB
+		<br>
+		5. contents_________AAAA
+		<br>
+		6. contents_________BBBB
+		<br>
+		7. contents_________AAAA
+		<br>
+		8. contents_________BBBB
+		<br>
+		9. contents_________AAAA
+		<br>
+		10. contents_________BBBB
+		<br>
+	</p>
+<a class="close" href="#close"> </a> 
+</div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
