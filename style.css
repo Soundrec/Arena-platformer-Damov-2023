@@ -1,5 +1,65 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
+
+
+
+
+input {
+  border: none;
+  margin: 8px;
+  padding: 8px;
+  font-size: 1em;
+  width: 30%;
+  background-color: transparent;
+  border-color: rgba(255,255,255,0.8);
+  border-bottom: solid white 2px;
+  border-radius: 1px;
+  font-family: Open Sans Condensed;
+  font-size: 100%;
+  color: rgba(255,255,255,0.8);
+  /*line-height: 0.8;*/
+  /*text-align: center;*/
+  }
+
+
+.uname{
+    font-family: Open Sans Condensed;
+    font-size: 200%;
+	color: rgba(255,255,255,0.8);
+}
+	
+	
+}
+
+::placeholder {
+  font-family: Open Sans Condensed;
+  color: rgba(255,255,255,0.8);
+  }
+
+input:focus {
+  
+  box-shadow: 0px 20px 10px -5px rgba(0,0,0,0.25);
+  transition: 0.2s ease;  /*box-shadow: 0 -10px  red inset;*/
+  border: none;
+  border-bottom: solid white 2px;
+  border-radius: 1px;
+  border-color: rgba(255,255,255,1);
+  outline: none;
+
+
+}
+
+}
+/*
+.reg_form {
+  align-content: center;
+  justify-content: center;
+}*/
+
+form  { 
+  /*align-items: center;*/
+justify-content: center;      }
+
 .goverlay {
     top: 0;
     right: 0;
@@ -8,43 +68,79 @@
     z-index: 10;
     display: none;
     background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
-    position: fixed; 
+    backdrop-filter: blur(10px);
+    position: fixed;  
 
 }
 .goverlay:target {
     display: block;
 }
 .popup {
+    margin: 0;
+    padding: 16px;
     top: -150%;
     /*not working*/
     right: 0;
     left: 50%;
     z-index: 20;
-    margin: 0;
-    width: 50%;
-    min-width: 320px;
-    max-width: 600px;
+    width: 100%;
+    min-width: 600px;
+    max-width: 1080px;
+
+    height:80%;
+    min-height: 700px;
+    
     position: fixed;
-    padding: 16px;
-    background-color: rgba(255,255,255,0.4);
+    /*background-color: rgba(255,255,255,0.4);*/
     font-family: Open Sans Condensed;
     font-size: 150%;
-    min-height:70%;
-    height:400px;
+    min-height:100%;
     overflow:scroll;
+    /*justify-content: center;*/
+    align-items: center;
+}
+
+table{
+font-size: 1.2em;
+	
+	
 }
 ::-webkit-scrollbar {
     display: none;
 }
 
+
+
+#scores {
+  /*width: 50%;*/
+  justify-content: center;
+} 
 .goverlay:target+.popup {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    top: 20%;
+    top: 0%;
 }
+
+iframe {
+  overflow-clip-margin: content-box !important;
+  border-style: none;
+  overflow: clip !important;
+  width: 90%;
+}
+
+.gameframe {
+  justify-content: center;
+  position: absolute;
+  /*top: -30%;*/
+  width: 100%;
+  height: 100%;
+  overflow:scroll;
+}/*
+::-webkit-scrollbar {
+    display: none;
+}*/
 
 .close {
     top: 0px;
@@ -78,51 +174,34 @@
 
 .popup h2 { 
     margin: 0;
-  /*background-color: rgba(255,255,255,0.5);*/
-  color: #fff;
-    /*color: rgba(10,50,50,1);*/
+    color: #fff;
     padding: 5px 0px 10px;
-    text-align: left;
-    text-shadow: 1px 1px 3px #adadad;
-    font-weight: 600;
-    font-size: 1.4em;
-    /*font-family: 'Tahoma', Arial, sans-serif;*/
+    /*text-shadow: 1px 1px 3px #adadad;*/
+    /*font-weight: 600;*/
+    /*font-size: 1.4em;*/
     line-height: 1.3;
     text-align: center;
-
 }
 
 .popup p {
-  /*background-color: rgba(255,255,255,0.5);*/
   color: #fff;
-  /*color: rgba(10,50,50,1);*/
+  text-align: center;
   margin: 0; 
-  padding: 5px 0}
+  padding: 5px 0
+  line-height: 1;
+}
 
 html,
 body {
+  height: 100%;
+  width: 100%;
   overflow: hidden;
-  background-image: url(images/bg3.svg);
-  background-size:100%;
-  background-position:center;
-  background-size: cover;
+  background-image: url(images//bg3.svg);
+  background-position: center;
+  background-size:cover;
+
   margin: 0;
 }
-
-
-/*#note {
-  position: absolute;
-  color: rgba(249,241,204,1);
-  left: 0;
-  right: 0;
-  top: 30%;
-  font-size: 150%;
-  margin: auto;
-  text-align: center;
-  user-select: none;
-  font-family: Courier New;
-}*/
-
 
 #container {
   position: relative;
@@ -158,7 +237,33 @@ div[class*=box] {
   top: 340px; 
 }
 
+.box-4 { 
+  top: 410px; 
+}
 
+.box-reg {  left: -2%;
+  font-size: 75%;
+}
+
+.test {
+  /*align-items: right;*/
+    top:16px;
+    right: 2px;
+  margin: 16px;
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  
+}
+
+.signin-img {
+  width:30px;
+  height: 27px;
+  /*box-shadow: 0px 20px white;*/
+
+}
 .btn {
   line-height: 50px;
   height: 50px;
@@ -172,6 +277,7 @@ div[class*=box] {
   transition: all 0.3s;
   position: relative;
 }
+
 .btn-one span {
   transition: all 0.3s;
   font-family: Open Sans Condensed;
@@ -249,12 +355,19 @@ div[class*=box] {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-/*
-#unity-container { position: absolute }
-#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
-#unity-container.unity-mobile { width: 100%; height: 100% }
-#unity-canvas { background: #231F20 }
-.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-container { 
+  position: absolute;
+}
+#unity-container.unity-desktop { 
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%) 
+}
+#unity-container.unity-mobile { width: 960px; height: 600px }
+#unity-canvas { 
+  background: #231F20 
+}
+.unity-mobile #unity-canvas { width: 960px; height: 600px }
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
 #unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
 #unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
@@ -265,4 +378,3 @@ div[class*=box] {
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
 #unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
-*/
